@@ -1,52 +1,68 @@
----
-title: Web Data Connector Home
-layout: home
-indexed_by_search: false
----
-<header class="jumbotron hero-spacer text-center">
-    <h1>Web Data Connector</h1>
-    <p>Bring the data that you care about into Tableau.</p>
-    <p>This site will get you up and running with the Web Data Connector (WDC). The WDC SDK, including the simulator, developer samples, and documentation are all open source.</p>
-    <br />
-    <a class="btn btn-primary btn-lg" href="{{ site.baseurl }}/docs" role="button">Get Started</a>&nbsp;&nbsp;
-    <a class="btn btn-primary btn-lg" href="https://github.com/tableau/webdataconnector/archive/2.1.0.zip" role="button">Download</a>
-</header>
-<div class="row">
-    <div class="col-md-3 text-center">
-        <div class="thumbnail thumb-home">
-            <a href="{{ site.baseurl }}/docs/"><img src="{{ site.baseurl }}/assets/docs.png" class="img-home" alt="Docs Link"></a>
-            <div class="caption">
-                <h3>Documentation</h3>
-                <p>Read the tutorial and learn key concepts for the Web Data Connector platform.</p>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-3 text-center">
-        <div class="thumbnail thumb-home">
-            <a href="{{ site.baseurl }}/docs/api_ref.html"><img src="{{ site.baseurl }}/assets/api_ref.png" class="img-home" alt="Ref Link"></a>
-            <div class="caption">
-                <h3>API Reference</h3>
-                <p>Consult the API reference while you build your connectors.</p>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-3 text-center">
-        <div class="thumbnail thumb-home">
-            <a href="{{ site.baseurl }}/community/"><img src="{{ site.baseurl }}/assets/community.jpg" class="img-home" alt="News Link"></a>
-            <div class="caption">
-                <h3>Community</h3>
-                <p>Browse connectors built by the community and use them to connect to data from Tableau.</p>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-3 text-center">
-        <div class="thumbnail thumb-home">
-            <a href="{{ site.baseurl }}/news/"><img src="{{ site.baseurl }}/assets/logo.png" class="img-home" alt="News Link"></a>
-            <div class="caption">
-                <h3>What's New?</h3>
-                <p>Keep up to date with the latest feature announcements, known issues, and release notes.</p>
-            </div>
-        </div>
-    </div>
-</div>
+<html>
+<?xmlversion="1.0"encoding="utf-8"standalone="yes"?>
+<head>
+    <title>Fetch CSV</title>
+    <meta http-equiv="Cache-Control" content="no-store" />
 
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+    <script src="https://connectors.tableau.com/libs/tableauwdc-2.0.latest.js" type="text/javascript"></script>
+	
+	<script src="fetchCSV.js" type="text/javascript"></script>
+</head>
+
+<body>
+	
+	<div class="container">
+
+      <div class="page-header">
+        <h1>Tableau WDC Fetch CSV</h1>
+        <p class="lead">This web data connector fetches a CSV from the web to be analyzed in Tableau.  </p>
+      </div>
+
+      <h3>Enter the CSV Location Below.  DO NOT INCLUDE HTTP:// or HTTPS://</h3>
+      <p></p>
+      <div class="row">
+        <div class="col-md-4">
+			<div class="ui-widget">
+				<label for="CSV">CSV Location: </label>
+				<input id="CSV" class="form-control">
+			</div>
+		</div>
+		
+      </div>
+	  <div class="row">
+		<div class="col-md-4">
+			<div>
+                <button type="button" id="submitButton" class="btn btn-success" style="margin: 10px;">Get CSV Data!</button>
+            </div>
+		</div>
+	  </div>
+	  
+	  <div class="row">
+		<div class="col-md-12">
+			<div>
+                <p>Example Locations</p>
+				<ul>
+					<li>World Health Organization - Life expectancy at birth (years): apps.who.int/gho/athena/api/GHO/WHOSIS_000001.csv</li>
+					<li>World Health Organization - Adolescent birth rate (per 1000 women aged 15-19 years): apps.who.int/gho/athena/api/GHO/MDG_0000000003.csv</li>
+					<li>World Health Organization - Yellow fever - number of reported cases: apps.who.int/gho/athena/api/GHO/WHS3_50.csv</li>
+				</ul>
+            </div>
+		</div>
+	  </div>
+    </div>
+	
+	
+	
+</body>
+
+<<<<<<< HEAD
+</html>
+=======
+</html>
+>>>>>>> 7d06dcdb9662456e630e30b8c0e486844914c27e
